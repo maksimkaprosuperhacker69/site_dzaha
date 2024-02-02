@@ -1,4 +1,33 @@
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 from flask import *
+import os
+
+"""
+def authenticate():
+    gauth = GoogleAuth()
+    gauth.LocalWebserverAuth()
+
+    # Сохраняем учетные данные в файл credentials.json
+    gauth.SaveCredentialsFile("credentials.json")
+
+    return gauth
+"""
+def upload_to_google_drive(file_path):
+    gauth = GoogleAuth()
+
+    gauth.LoadCredentialsFile("credentials.json")
+    drive = GoogleDrive(gauth)
+
+    # Создаем объект файла для загрузки
+    file_drive = drive.CreateFile({'title': file_path.split("/")[-1]})
+
+    # Устанавливаем контент файла
+    file_drive.SetContentFile(file_path)
+
+    # Загружаем файл на Google Диск
+    file_drive.Upload()
+
 
 app = Flask(__name__, template_folder='templates')
 app.secret_key = 'whqwqwdq'
@@ -28,6 +57,9 @@ def success():
  if request.method == 'POST': 
     f = request.files['myfile'] 
     f.save(f.filename) 
+    upload_to_google_drive(f.filename)
+    os.remove(f.filename)
+
  user_agent = request.headers.get('User-Agent')
  if 'Mobile' not in user_agent:
     return render_template('d_index.html')
@@ -36,4 +68,4 @@ def success():
 
 
 if __name__ == '__main__': 
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',port=80)
