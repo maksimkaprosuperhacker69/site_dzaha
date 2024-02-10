@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Upload | Youth Scientific Alliance</title>
+    <link rel="icon" href="static/images/icon.ico" type="image/x-icon">
+    <link href="static/css/d_style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Paytone+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .upload {
+        position: relative;
+        font-family: "Paytone One", sans-serif;
+        color: #004a88;
+        font-family: "Paytone One";
+        font-size: 4vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: inline;
+        border-bottom: 5px solid #ffb600;
+      }
+      .about_us {
+        position: relative;
+        cursor: pointer;
+        font-family: "Paytone One", sans-serif;
+        color: #004a88;
+        font-family: "Paytone One";
+        font-size: 4vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: inline;
+        margin-left: 3%;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+      }
+      .about_us:hover {
+        color: #ffb600; /* Меняем цвет текста */
+        text-shadow: 0vw 0vw 0px #0b90d5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="/about">
+        <p class="about_us">About us</p>
+      </a>
+      <p class="title">Youth Scientific Alliance</p>
+      <a>
+        <p class="upload">Upload</p>
+      </a>
+    </div>
+    <div class="outside_main">
+      <div class="main">
+        <div class="mini">
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <button id="submitButton" disabled type="submit" class="upload_but">
+              Upload
+            </button>
+            <label for="myfile">
+              <div class="upload_pdf" style="z-index: 1" id="fileName">
+                upload pdf files
+              </div>
+            </label>
+            <input
+              style="
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+              "
+              type="file"
+              name="myfile"
+              id="myfile"
+              onchange="displayFileName()"
+              accept=".pdf"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a
+        href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz
+      "
+      >
+        <div class="inst_text">@ysa.project_</div>
+      </a>
+
+      <div class="email_text">
+        <a class="email_text_a" href="mailto:ysa.projectt@gmail.com"
+          >ysa.projectt@gmail.com</a
+        >
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="static/js/vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: "html",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      shininess: 35,
+      waveHeight: 8.5,
+      waveSpeed: 0.4,
+      zoom: 1.35,
+    });
+  </script>
+  <script>
+    function displayFileName() {
+      var submitButton = document.getElementById("submitButton");
+      var fileInput = document.getElementById("myfile");
+      var fileNameDisplay = document.getElementById("fileName");
+      if (fileInput.files.length > 0) {
+        // Отображение названия файла
+        fileNameDisplay.innerHTML = fileInput.files[0].name;
+      } else {
+        // Если файл не выбран, очистите отображение
+        fileNameDisplay.innerHTML = "upload pdf files";
+      }
+      if (fileInput.files.length > 0) {
+        submitButton.removeAttribute("disabled");
+        submitButton.style.border = "1vw solid #ffb600";
+      } else {
+        submitButton.setAttribute("disabled", "true");
+        submitButton.style.border = "0.6vw solid #004a88";
+      }
+    }
+  </script>
+</html>

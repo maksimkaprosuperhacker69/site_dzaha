@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #0175b8;
+    background-image: url('/static/images/bg_m.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+#checkbox2 {
+    display: none;
+}
+
+.toggle2 {
+    position: absolute;
+    width: 18vw;
+    height: 15vw;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+    transition-duration: .5s;
+    top: 5vh;
+}
+
+.bars {
+    width: 100%;
+    height: 3vw;
+    background-color: #ffb600;
+    border-radius: 4vw;
+    display: inline;
+}
+
+#bar5 {
+    transition-duration: .8s;
+}
+
+#bar4,
+#bar6 {
+    width: 100%;
+
+}
+
+#checkbox2:checked+.toggle2 .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox2:checked+.toggle2 #bar5 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox2:checked+.toggle2 #bar4 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox2:checked+.toggle2 #bar6 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox2:checked+.toggle2 {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+.logo {
+    display: inline-flex;
+    font-size: 12vw;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ffb600;
+    font-family: "Paytone One";
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0.175rem;
+    margin-left: 3vw;
+
+
+
+}
+
+.main_butns {
+    margin-top: 17vh;
+}
+
+.upload_but {
+    border: 2vw solid #004a88;
+
+    display: block;
+    color: #004a88;
+    text-shadow: 0.5vh 0.3vh 0px #ffb600;
+    font-family: "Paytone One";
+    font-size: 14vw;
+    font-style: normal;
+    border-radius: 10vw;
+    background-color: #009cde;
+
+    transition: 0.2s all;
+    text-align: center;
+    margin-left: 6vw;
+    margin-right: 3vw;
+    padding-inline: 0;
+    padding-left: 14vw;
+    padding-right: 14vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+
+}
+
+.upload_but[disabled] {
+    cursor: default;
+}
+
+.upload_but:hover:not([disabled]) {
+    background: #ffb600;
+    /* Цвет фона */
+}
+
+.upload_pdf {
+    border: 3vw solid #ffb600;
+
+    color: #ffb600;
+    text-shadow: 0.5vh 0.2vh 0px #004a88;
+    font-family: Audiowide;
+    font-size: 7vw;
+    font-style: normal;
+    line-height: normal;
+    border-radius: 9vw;
+    background-color: #009cde;
+    padding: 1vh 3vw 1vh 3vw;
+    margin: 2vw 1vw 0vw 1vw;
+    transition: 0.2s all;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+
+
+}
+
+.upload_pdf:hover {
+    background: #ffb600;
+    /* Цвет фона */
+    text-shadow: 0vw 0vw 0px #004a88;
+    color: #004a88;
+    font-size: 8vw;
+}
+
+.instagram_icon {
+    display: inline;
+    margin-left: 5vw;
+}
+
+.m_enjoy_but {
+    display: inline;
+    position: relative;
+    bottom: -3.5vw;
+    border-radius: 5vw;
+    background: #FFB600;
+    color: #004A88;
+    font-family: "Post No Bills Jaffna ExtraBold", sans-serif;
+    ;
+    font-size: 4vw;
+    font-style: normal;
+    text-align: center;
+    padding-top: 2.3vh;
+    padding-bottom: 2.3vh;
+    padding-left: 0.9vw;
+    padding-right: 0.9vw;
+    margin-left: 9vw;
+}
+
+.m_enjoy_but:hover {
+    background-color: #004a88;
+    color: #ffb600;
+}
+
+.footer {
+    display: flex;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0vw;
+}
+
+.email_icon {
+    display: inline;
+    margin-left: 7vw;
+    position: relative;
+    bottom: 1vw;
+}
+
+.menu {
+    position: absolute;
+    background-image: url('/static/images/bg_m.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.main_text {
+    color: #ffb600;
+    font-family: "Post No Bills Jaffna ExtraBold", sans-serif;
+    font-size: 13vw;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.info_text {
+    color: #fff;
+    font-family: "Rubik One";
+    font-size: 4vw;
+    padding: 2em;
+}
+
+.main_text_block {
+    text-align: center;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-radius: 10vw;
+    border: 3vw solid #ffb600;
+    background: #0b90d5;
+}
+
+.main_contact_block {
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 7vw;
+    border: 0.5rem solid #ffb600;
+    background: #0b90d5;
+    text-align: left;
+    padding-left: 2vw;
+    margin-bottom: 10vh;
+}
+
+.info_contact {
+    color: #fff;
+    font-family: "Rubik One";
+    font-size: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+span {
+    color: #ffb600;
+}
