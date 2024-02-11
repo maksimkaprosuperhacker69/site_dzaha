@@ -13,11 +13,12 @@ def authenticate():
 
     return gauth
 """
-global gauth
+
 gauth = GoogleAuth()
-gauth.LoadCredentialsFile("credentials.json")
-global drive
+gauth.service_account_json = 'arctic-eye-413116-1255eb7af814.json'  # Path to the JSON file you downloaded
+gauth.LocalWebserverAuth()  
 drive = GoogleDrive(gauth)
+
 def upload_to_google_drive(file_path):
     
 
