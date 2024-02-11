@@ -3,20 +3,8 @@ from pydrive.drive import GoogleDrive
 from flask import *
 import os
 
-"""
-def authenticate():
-    gauth = GoogleAuth()
-    gauth.LocalWebserverAuth()
-
-    # Сохраняем учетные данные в файл credentials.json
-    gauth.SaveCredentialsFile("credentials.json")
-
-    return gauth
-"""
-
 gauth = GoogleAuth()
-gauth.service_account_json = 'arctic-eye-413116-1255eb7af814.json'  # Path to the JSON file you downloaded
-gauth.LocalWebserverAuth()  
+gauth.CommandLineAuth()
 drive = GoogleDrive(gauth)
 
 def upload_to_google_drive(file_path):
