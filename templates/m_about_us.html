@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" id="page">
   <head>
+    <!-- Установка кодировки символов для документа -->
     <meta charset="UTF-8" />
+    <!-- Отключение автоматического обнаружения телефонных номеров -->
     <meta name="format-detection" content="telephone=no">
+    <!-- Установка заголовка веб-страницы -->
     <title>About us | Youth Scientific Alliance</title>
 
+    <!-- Установка цвета темы для браузера -->
     <meta name="theme-color" content="#0175b8" />
+    <!-- Разрешение использования веб-страницы как автономного веб-приложения -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Установка стиля строки состояния для iOS -->
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <!-- Установка заголовка для веб-приложения при добавлении на главный экран на iOS -->
     <meta
       name="apple-mobile-web-app-title"
       content="Youth Scientific Alliance"
     />
 
+    <!-- Ссылка на иконку для веб-страницы -->
     <link rel="icon" href="static/images/icon.ico" type="image/x-icon" />
+    <!-- Ссылка на основной CSS-стиль -->
     <link href="static/css/m_style.css" rel="stylesheet" />
+    <!-- Предварительное подключение к Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Ссылки на дополнительные шрифты из Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Paytone+One&display=swap"
       rel="stylesheet"
@@ -33,7 +44,9 @@
       rel="stylesheet"
     />
 
+    <!-- Добавление встроенных стилей CSS -->
     <style>
+      /* Стили для текста "upload" */
       .upload {
         display: inline;
         position: absolute;
@@ -49,12 +62,12 @@
         line-height: normal;
         display: inline;
       }
+      /* Стили для текста "about us" */
       .about_us {
         display: inline;
         position: absolute;
         top: 45vh;
         left: 22vw;
-
         font-family: "Paytone One", sans-serif;
         color: #ffb600;
         font-family: "Paytone One";
@@ -65,19 +78,24 @@
         -webkit-transition: color 0.6s ease;
         transition: color 0.6s ease;
       }
+      /* Стили для эффекта при наведении на текст "upload" */
       .upload:hover {
-        color: #ffb600; /* Меняем цвет текста */
+        color: #ffb600; /* Изменение цвета текста при наведении */
       }
     </style>
   </head>
 
   <body style="">
+    <!-- Секция заголовка веб-страницы -->
     <div class="header">
+      <!-- Логотип -->
       <div class="logo">
+        <!-- Текст логотипа -->
         <span><span style="color: white">Y</span>outh</span>
         <span><span style="color: white">S</span>cientific</span>
         <span><span style="color: white">A</span>lliance</span>
       </div>
+      <!-- Кнопка переключения меню -->
       <div
         style="
           display: inline;
@@ -91,7 +109,9 @@
       >
         <div>
           <input id="checkbox2" type="checkbox" />
+          <!-- Ярлык переключения меню -->
           <label class="toggle toggle2" for="checkbox2">
+            <!-- Полоски для переключения меню -->
             <div id="bar4" class="bars"></div>
             <div id="bar5" class="bars"></div>
             <div id="bar6" class="bars"></div>
@@ -99,8 +119,11 @@
         </div>
       </div>
     </div>
+    <!-- Заголовок раздела "Кто мы?" -->
     <h1 class="main_text">Кто мы?</h1>
+    <!-- Блок текста для раздела "Кто мы?" -->
     <div class="main_text_block">
+      <!-- Параграф информационного текста -->
       <p class="info_text">
         Проект <span>"Youth Scientific Alliance"</span> посвящен проведению
         увлекательных исследований в различных областях, которые бы не были
@@ -120,8 +143,11 @@
         доступно для каждого.
       </p>
     </div>
+    <!-- Заголовок раздела "Наши контакты" -->
     <h1 class="main_text">Наши контакты</h1>
+    <!-- Блок контактной информации -->
     <div class="main_contact_block">
+      <!-- Параграф контактной информации -->
       <p class="info_contact">
         <span>+7 705 477 2540</span> (Илья)
 
@@ -134,9 +160,13 @@
         <span>+7 777 198 9839</span> (Назира)
       </p>
     </div>
+    <!-- Разделитель между контентом и футером -->
     <div style="height: 10vh"></div>
+    <!-- Секция футера -->
     <div class="footer">
+      <!-- Ссылка на Instagram -->
       <a href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz">
+        <!-- Иконка Instagram -->
         <div class="instagram_icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -145,6 +175,7 @@
             viewBox="0 0 46 47"
             fill="none"
           >
+            <!-- Путь иконки Instagram -->
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -154,12 +185,16 @@
           </svg>
         </div>
       </a>
+      <!-- Ссылка на форму для заполнения -->
       <a href="https://forms.gle/TDjCBKh2xw7NnZof9">
+        <!-- Кнопка для перехода к форме -->
         <div class="m_enjoy_but">
           <b>Стать частью команды</b>
         </div>
       </a>
+      <!-- Ссылка для отправки письма -->
       <a href="mailto:ysa.projectt@gmail.com">
+        <!-- Иконка электронной почты -->
         <div class="email_icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -168,12 +203,13 @@
             viewBox="0 0 60 60"
             fill="none"
           >
+            <!-- Путь иконки электронной почты -->
             <path
               d="M42.5 53.125H17.5C8.375 53.125 3.125 47.875 3.125 38.75V21.25C3.125 12.125 8.375 6.875 17.5 6.875H42.5C51.625 6.875 56.875 12.125 56.875 21.25V38.75C56.875 47.875 51.625 53.125 42.5 53.125ZM17.5 10.625C10.35 10.625 6.875 14.1 6.875 21.25V38.75C6.875 45.9 10.35 49.375 17.5 49.375H42.5C49.65 49.375 53.125 45.9 53.125 38.75V21.25C53.125 14.1 49.65 10.625 42.5 10.625H17.5Z"
               fill="#FFB600"
             />
             <path
-              d="M29.9994 32.1749C27.8994 32.1749 25.7745 31.5249 24.1495 30.1999L16.3244 23.9499C15.5244 23.2999 15.3745 22.1249 16.0245 21.3249C16.6745 20.5249 17.8495 20.3749 18.6495 21.0249L26.4744 27.2749C28.3744 28.7999 31.5994 28.7999 33.4994 27.2749L41.3244 21.0249C42.1244 20.3749 43.3244 20.4999 43.9494 21.3249C44.5994 22.1249 44.4745 23.3249 43.6495 23.9499L35.8244 30.1999C34.2244 31.5249 32.0994 32.1749 29.9994 32.1749Z"
+              d="M29.9994 32.1749C27.8994 32.1749 25.7745 31.5249 24.1495 30.1999L16.7004 36.5749C16.6516 36.6139 16.6004 36.6494 16.5483 36.6864C15.9741 37.027 15.3301 36.7475 15.1443 36.1895L7.17539 16.4395C7.07824 16.164 7.15304 15.854 7.36049 15.6355C7.56787 15.4169 7.86189 15.3365 8.12539 15.4295L29.9994 22.3249L51.8744 15.4295C52.3154 15.2437 52.8234 15.5009 52.9474 15.9195C53.0724 16.338 52.7754 16.7789 52.3344 16.9655L44.3654 36.7155C44.2212 36.8705 44.0417 36.962 43.8479 36.971C43.654 36.98 43.4662 36.9054 43.3214 36.7715L35.8723 30.3965C34.2474 31.5215 32.1003 32.1749 29.9994 32.1749ZM8.12539 20.5755L26.6244 31.0305C26.7691 31.1111 26.8849 31.2556 26.9574 31.4369L30.7494 38.5505L34.5424 31.4369C34.6148 31.2556 34.7307 31.1111 34.8754 31.0305L53.3744 20.5755H8.12539Z"
               fill="#FFB600"
             />
           </svg>

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" id="page">
   <head>
+    <!-- Устанавливаем кодировку и заголовок страницы -->
     <meta charset="UTF-8" />
     <title>Upload | Youth Scientific Alliance</title>
+    <!-- Запрещаем браузеру автоматически обнаруживать номера телефонов -->
     <meta name="format-detection" content="telephone=no">
 
+    <!-- Устанавливаем цвет темы и стиль полосы состояния веб-приложения для устройств Apple -->
     <meta name="theme-color" content="#0175b8" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -15,19 +18,22 @@
       content="r"
     />
 
+    <!-- Устанавливаем иконку сайта -->
     <link rel="icon" href="static/images/icon.ico" type="image/x-icon" />
+    <!-- Подключаем CSS-стили -->
     <link href="static/css/m_style.css" rel="stylesheet" />
+    <!-- Подключаем шрифты Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Paytone+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Встроенные стили -->
     <style>
       .upload {
         display: inline;
@@ -58,18 +64,21 @@
         transition: color 0.6s ease;
       }
       .about_us:hover {
-        color: #ffb600; /* Меняем цвет текста */
+        color: #ffb600; /* Меняем цвет текста при наведении */
       }
     </style>
   </head>
 
   <body>
+    <!-- Хедер сайта -->
     <div class="header">
+      <!-- Логотип -->
       <div class="logo">
         <span><span style="color: white">Y</span>outh</span>
         <span><span style="color: white">S</span>cientific</span>
         <span><span style="color: white">A</span>lliance</span>
       </div>
+      <!-- Кнопка меню -->
       <div
         style="
           display: inline;
@@ -92,11 +101,15 @@
       </div>
     </div>
 
+    <!-- Основная часть страницы -->
     <div class="main_butns">
+      <!-- Форма для загрузки файла -->
       <form action="/upload" method="post" enctype="multipart/form-data">
+        <!-- Кнопка отправки файла -->
         <button type="submit" id="submitButton" disabled class="upload_but">
           Upload
         </button>
+        <!-- Поле для выбора файла -->
         <label for="myfile">
           <div class="upload_pdf" style="z-index: 1" id="fileName">
             upload pdf files
@@ -115,14 +128,16 @@
           name="myfile"
           id="myfile"
           onchange="displayFileName()"
-          accept=".pdf"
         />
       </form>
     </div>
+
+    <!-- Футер сайта -->
     <footer class="footer">
-      
+      <!-- Ссылка на Instagram -->
       <a href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz">
         <div class="instagram_icon">
+          <!-- Иконка Instagram -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="120"
@@ -139,13 +154,16 @@
           </svg>
         </div>
       </a>
+      <!-- Ссылка на форму для становления частью команды -->
       <a href="https://forms.gle/TDjCBKh2xw7NnZof9">
         <div class="m_enjoy_but">
           <b>Стать частью команды</b>
         </div>
       </a>
+      <!-- Ссылка на электронную почту -->
       <a href="mailto:ysa.projectt@gmail.com">
         <div class="email_icon">
+          <!-- Иконка почты -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -166,15 +184,20 @@
       </a>
     </footer>
 
+    <!-- Меню сайта -->
     <div class="menu" id="menu">
+      <!-- Ссылка на загрузку файла -->
       <div class="upload" id="upload">Upload</div>
+      <!-- Ссылка "О нас" -->
       <div class="about_us" id="about_us">
         <a href="/about" style="color: #004a88">About us</a>
       </div>
     </div>
   </body>
+  <!-- Подключаем скрипты -->
   <script src="static/js/script.js"></script>
   <script>
+    // Функция для отображения имени выбранного файла
     function displayFileName() {
       var submitButton = document.getElementById("submitButton");
       var fileInput = document.getElementById("myfile");

@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="telephone=no" />
     <title>Upload | Youth Scientific Alliance</title>
-    <link rel="icon" href="static/images/icon.ico" type="image/x-icon">
+    <!-- Устанавливаем иконку сайта -->
+    <link rel="icon" href="static/images/icon.ico" type="image/x-icon" />
+    <!-- Подключаем CSS-стили -->
     <link href="static/css/d_style.css" rel="stylesheet" />
+    <!-- Подключаем шрифты Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +19,12 @@
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Paytone+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Встроенные стили -->
     <style>
       .upload {
         position: relative;
         font-family: "Paytone One", sans-serif;
         color: #004a88;
-        font-family: "Paytone One";
         font-size: 4vw;
         font-style: normal;
         font-weight: 400;
@@ -34,7 +37,6 @@
         cursor: pointer;
         font-family: "Paytone One", sans-serif;
         color: #004a88;
-        font-family: "Paytone One";
         font-size: 4vw;
         font-style: normal;
         font-weight: 400;
@@ -45,34 +47,43 @@
         transition: all 0.6s ease;
       }
       .about_us:hover {
-        color: #ffb600; /* Меняем цвет текста */
-        text-shadow: 0vw 0vw 0px #0b90d5;
+        color: #ffb600; /* Меняем цвет текста при наведении */
+        text-shadow: 0vw 0vw 0px #0b90d5; /* Добавляем тень */
       }
     </style>
   </head>
 
   <body>
+    <!-- Верхняя часть страницы - хедер -->
     <div class="header">
+      <!-- Ссылка на страницу "О нас" -->
       <a href="/about">
         <p class="about_us">About us</p>
       </a>
+      <!-- Заголовок сайта -->
       <p class="title">Youth Scientific Alliance</p>
+      <!-- Ссылка на страницу загрузки -->
       <a>
         <p class="upload">Upload</p>
       </a>
     </div>
+    <!-- Основная часть страницы -->
     <div class="outside_main">
       <div class="main">
         <div class="mini">
+          <!-- Форма для загрузки файла -->
           <form action="/upload" method="post" enctype="multipart/form-data">
+            <!-- Кнопка загрузки -->
             <button id="submitButton" disabled type="submit" class="upload_but">
               Upload
             </button>
+            <!-- Отображение имени выбранного файла -->
             <label for="myfile">
               <div class="upload_pdf" style="z-index: 1" id="fileName">
                 upload pdf files
               </div>
             </label>
+            <!-- Поле выбора файла -->
             <input
               style="
                 width: 0.1px;
@@ -86,20 +97,20 @@
               name="myfile"
               id="myfile"
               onchange="displayFileName()"
-              accept=".pdf"
             />
           </form>
         </div>
       </div>
     </div>
+    <!-- Нижняя часть страницы - футер -->
     <div class="footer">
+      <!-- Ссылка на Instagram -->
       <a
-        href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz
-      "
+        href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz"
       >
         <div class="inst_text">@ysa.project_</div>
       </a>
-
+      <!-- Электронная почта -->
       <div class="email_text">
         <a class="email_text_a" href="mailto:ysa.projectt@gmail.com"
           >ysa.projectt@gmail.com</a
@@ -107,8 +118,10 @@
       </div>
     </div>
   </body>
+  <!-- Подключаем скрипты -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="static/js/vanta.waves.min.js"></script>
+  <!-- Скрипт для анимации фона -->
   <script>
     VANTA.WAVES({
       el: "html",
@@ -125,6 +138,7 @@
       zoom: 1.35,
     });
   </script>
+  <!-- Скрипт для отображения имени выбранного файла и активации кнопки загрузки -->
   <script>
     function displayFileName() {
       var submitButton = document.getElementById("submitButton");

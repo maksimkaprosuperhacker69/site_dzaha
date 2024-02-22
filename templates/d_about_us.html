@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Устанавливаем кодировку и заголовок страницы -->
     <meta charset="UTF-8" />
     <title>About us | Youth Scientific Alliance</title>
+    <!-- Запрещаем браузеру автоматически обнаруживать номера телефонов -->
     <meta name="format-detection" content="telephone=no">
+    <!-- Устанавливаем иконку сайта -->
     <link rel="icon" href="static/images/icon.ico" type="image/x-icon">
+    <!-- Подключаем CSS-стили -->
     <link href="static/css/d_style.css" rel="stylesheet" />
+    <!-- Подключаем шрифты Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +26,7 @@
       rel="stylesheet"
     />
 
+    <!-- Встроенные стили -->
     <style>
       .about_us {
         position: relative;
@@ -52,22 +58,28 @@
         transition: all 0.6s ease;
       }
       .upload:hover {
-        color: #ffb600; /* Меняем цвет текста */
-        text-shadow: 0vw 0vw 0px #0b90d5;
+        color: #ffb600; /* Меняем цвет текста при наведении */
+        text-shadow: 0vw 0vw 0px #0b90d5; /* Добавляем тень */
       }
     </style>
   </head>
 
   <body>
+    <!-- Верхняя часть страницы - хедер -->
     <div class="header">
+      <!-- Ссылка на страницу "О нас" -->
       <p class="about_us">About us</p>
+      <!-- Заголовок сайта -->
       <p class="title">Youth Scientific Alliance</p>
+      <!-- Ссылка на страницу загрузки -->
       <a href="/upload">
         <p class="upload">Upload</p>
       </a>
     </div>
+    <!-- Основная часть страницы -->
     <h1 class="main_text">Кто мы?</h1>
     <div class="main_text_block">
+      <!-- Информационный текст -->
       <p class="info_text">
         Проект <span>"Youth Scientific Alliance"</span> посвящен проведению
         увлекательных исследований в различных областях, которые бы не были
@@ -87,6 +99,7 @@
         доступно для каждого.
       </p>
     </div>
+    <!-- Информация о контактах -->
     <h1 class="main_text">Наши контакты</h1>
     <div class="main_contact_block">
       <p class="info_contact">
@@ -101,18 +114,21 @@
         <span>+7 777 198 9839</span> (Назира)
       </p>
     </div>
+    <!-- Ссылка на форму для вступления в команду -->
     <a href="https://forms.gle/TDjCBKh2xw7NnZof9"
       ><div class="enjoy_but"><b>Стать частью команды</b></div></a
     >
+    <!-- Пустой блок для отступа -->
     <div style="height: 15vh"></div>
+    <!-- Нижняя часть страницы - футер -->
     <div class="footer">
+      <!-- Ссылка на Instagram -->
       <a
-        href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz
-      "
+        href="https://www.instagram.com/ysa.project_?igsh=amxvcmo0djVqaXpz"
       >
         <div class="inst_text">@ysa.project_</div>
       </a>
-
+      <!-- Электронная почта -->
       <div class="email_text">
         <a class="email_text_a" href="mailto:ysa.projectt@gmail.com"
           >ysa.projectt@gmail.com</a
@@ -120,8 +136,10 @@
       </div>
     </div>
   </body>
+  <!-- Подключаем скрипты -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="static/js/vanta.waves.min.js"></script>
+  <!-- Скрипт для анимации фона -->
   <script>
     VANTA.WAVES({
       el: "html",
